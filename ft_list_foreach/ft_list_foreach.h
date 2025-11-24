@@ -1,6 +1,6 @@
 #ifndef FT_LIST_FOREACH 
 #define FT_LIST_FOREACH
-
+#include <stdlib.h>
 
 typedef struct    s_list
 {
