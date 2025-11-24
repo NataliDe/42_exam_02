@@ -1,4 +1,4 @@
-#include "ft_list_size.h"
+#include "ft_list.h"
 int	ft_list_size(t_list *begin_list)
 {
     int l;
@@ -10,3 +10,4 @@ int	ft_list_size(t_list *begin_list)
     }
     return(l);
 }
+
