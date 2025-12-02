@@ -54,3 +54,43 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
     }
     return(st);
 }
+int main(void)
+{
+    void print_list( size_t *lst)
+    {
+        while(lst)
+        {
+            printf("%d , lst->data");
+            lst = lst->next;
+        }
+    }
+
+    int ascending(int a, int b)
+{
+	return (a <= b);
+}
+
+    t_list new(int data)
+    {
+        t_list *n = malloc(sizeof(t_list));
+        n->data = data;
+        n->naxt = NULL;
+        return(n);
+    }
+    t_list *a = new(4);
+    t_list *b = new(1);
+    t_list *c = new(7);
+    t_list *d = new(5);
+    t_list *e = new(4);
+
+    a->next = b;
+    b->next = c;
+    c->next = d;
+    d->next = e;
+
+    print_list(a);
+
+    a = sort_list(a, ascending);
+    print_list(a);
+    return (0);
+}

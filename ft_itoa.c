@@ -11,7 +11,7 @@ Your function must be declared as follows:
 char	*ft_itoa(int nbr);*/
 #include <stdlib.h>
 
-static int	ft_len(long n)
+static int	ft_len(long long n)
 {
 	int	len = 0;
 
@@ -27,7 +27,7 @@ static int	ft_len(long n)
 
 char	*ft_itoa(int nbr)
 {
-	long	n = nbr;           // long, щоб обробити INT_MIN
+	long long	n = nbr;           // long, щоб обробити INT_MIN
 	int		len = ft_len(n);
 	char	*str = malloc(len + 1);
 	if (!str)
